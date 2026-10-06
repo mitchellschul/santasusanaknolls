@@ -205,5 +205,29 @@
       main.innerHTML = '<div class="wrap page-head"><h1>Sorry, this page didn\'t load</h1><p>Please refresh the page. If it keeps happening, let the HOA board know.</p></div>';
     });
   }
+  /* Phone menu: three-line button that opens and closes the page links */
+  var nav = document.querySelector(".site-header .nav");
+  if (nav) {
+    document.documentElement.classList.add("js");
+    nav.id = nav.id || "site-nav";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "nav-toggle";
+    btn.setAttribute("aria-label", "Open menu");
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-controls", nav.id);
+    btn.innerHTML = "<span></span><span></span><span></span>";
+    nav.parentNode.insertBefore(btn, nav);
+    var setOpen = function (open) {
+      nav.classList.toggle("open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    };
+    btn.addEventListener("click", function () { setOpen(!nav.classList.contains("open")); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+    document.addEventListener("click", function (e) {
+      if (nav.classList.contains("open") && !nav.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+    });
+  }
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

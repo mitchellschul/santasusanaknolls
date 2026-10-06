@@ -153,8 +153,6 @@ td small { display: block; color: var(--soft); font-size: .9rem; }
 @media (max-width: 560px) {
   html { font-size: 106.25%; }
   .wrap { padding-inline: 16px; }
-  .site-header .wrap { flex-direction: column; align-items: flex-start; }
-  .nav ul { gap: 4px 22px; }
 }
 
 /* Content-driven pieces */
@@ -165,3 +163,30 @@ td small { display: block; color: var(--soft); font-size: .9rem; }
 .small-note { font-size: .9rem; color: var(--soft); }
 .ruled p.when { color: var(--ink); font-weight: 600; }
 .loading { min-height: 60vh; }
+
+/* Collapsible menu on phones */
+.nav-toggle { display: none; }
+@media (max-width: 640px) {
+  .site-header .wrap { flex-wrap: nowrap; position: relative; }
+  .brand img { width: 46px; height: 46px; }
+  .brand-name { font-size: 1.2rem; }
+  .nav-toggle {
+    display: flex; flex-direction: column; justify-content: center; gap: 6px; flex: none;
+    width: 48px; height: 48px; padding: 12px 11px; margin-right: -8px;
+    background: none; border: 0; cursor: pointer;
+  }
+  .nav-toggle span { display: block; height: 3px; background: var(--ink); transition: transform .2s, opacity .2s; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+  .js .nav {
+    display: none; position: absolute; left: 0; right: 0; top: 100%; z-index: 20;
+    background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 8px 16px rgba(0,0,0,.08);
+  }
+  .js .nav.open { display: block; }
+  .js .nav ul { flex-direction: column; gap: 0; padding: 4px 16px 10px; }
+  .js .nav li + li { border-top: 1px solid var(--line); }
+  .js .nav a { padding: 15px 4px; font-size: 1.15rem; border-bottom: 0; }
+  .js .nav a[aria-current="page"] { color: var(--oak); box-shadow: inset 4px 0 0 var(--oak); padding-left: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { .nav-toggle span { transition: none; } }
