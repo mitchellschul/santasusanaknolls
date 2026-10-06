@@ -1,0 +1,44 @@
+{
+  "members": [
+    {
+      "role": "President",
+      "name": "",
+      "email": ""
+    },
+    {
+      "role": "Vice President",
+      "name": "",
+      "email": ""
+    },
+    {
+      "role": "Treasurer",
+      "name": "",
+      "email": ""
+    },
+    {
+      "role": "Recording Secretary",
+      "name": "",
+      "email": ""
+    },
+    {
+      "role": "Media Secretary",
+      "name": "",
+      "email": ""
+    },
+    {
+      "role": "Neighborhood Representative",
+      "name": "",
+      "email": ""
+    },
+    {
+      "role": "Neighborhood Representative",
+      "name": "",
+      "email": ""
+    },
+    {
+      "role": "Neighborhood Representative",
+      "name": "",
+      "email": ""
+    }
+  ]
+}

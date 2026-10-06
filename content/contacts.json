@@ -1,0 +1,148 @@
+{
+  "groups": [
+    {
+      "title": "Public safety",
+      "intro": "",
+      "contacts": [
+        {
+          "name": "Ventura County Sheriff",
+          "note": "Non-emergency dispatch. The Sheriff patrols the Knolls.",
+          "phone": "(805) 654-9511",
+          "website": "sheriff.venturacounty.gov"
+        },
+        {
+          "name": "Ventura County Fire Department",
+          "note": "General information",
+          "phone": "(805) 389-9710",
+          "website": "vcfd.org"
+        },
+        {
+          "name": "Ventura County Animal Services",
+          "note": "Loose, injured or dead animals; pet licensing",
+          "phone": "(805) 388-4341",
+          "website": "vcas.us"
+        },
+        {
+          "name": "VC Alert emergency notifications",
+          "note": "Sign up for fire, evacuation and emergency alerts by text, phone or email",
+          "phone": "",
+          "website": "vcalert.org"
+        },
+        {
+          "name": "Ready Ventura County",
+          "note": "Emergency preparedness and current incidents",
+          "phone": "",
+          "website": "readyventuracounty.org"
+        }
+      ]
+    },
+    {
+      "title": "Ventura County",
+      "intro": "Because the Knolls is unincorporated, most local government services come from Ventura County rather than the City of Simi Valley.",
+      "contacts": [
+        {
+          "name": "County Supervisor, District 4",
+          "note": "Supervisor Janice S. Parvin represents the Knolls",
+          "phone": "",
+          "website": "supervisorparvin.venturacounty.gov"
+        },
+        {
+          "name": "Ventura County Public Works",
+          "note": "Roads, potholes, drainage. Report a problem online.",
+          "phone": "",
+          "website": "publicworks.venturacounty.gov"
+        },
+        {
+          "name": "Ventura County Code Compliance",
+          "note": "Building and zoning complaints",
+          "phone": "(805) 654-2788",
+          "website": "rma.venturacounty.gov"
+        }
+      ]
+    },
+    {
+      "title": "Utilities & trash",
+      "intro": "",
+      "contacts": [
+        {
+          "name": "Southern California Edison",
+          "note": "Electricity and power outages",
+          "phone": "1-800-684-8123",
+          "website": "sce.com"
+        },
+        {
+          "name": "SoCalGas",
+          "note": "Natural gas and gas leaks",
+          "phone": "1-800-427-2200",
+          "website": "socalgas.com"
+        },
+        {
+          "name": "Golden State Water Company",
+          "note": "Water service for some Knolls streets. Check your water bill.",
+          "phone": "1-800-999-4033",
+          "website": "gswater.com"
+        },
+        {
+          "name": "Ventura County Waterworks District No. 8",
+          "note": "Water service for some Knolls streets, operated by the City of Simi Valley",
+          "phone": "",
+          "website": "simivalley.org"
+        },
+        {
+          "name": "WM (Waste Management)",
+          "note": "Trash, recycling and green waste pickup",
+          "phone": "(805) 522-9400",
+          "website": "wm.com"
+        },
+        {
+          "name": "Simi Valley Landfill & Recycling Center",
+          "note": "",
+          "phone": "(805) 579-7267",
+          "website": "wm.com"
+        }
+      ]
+    },
+    {
+      "title": "Community & schools",
+      "intro": "",
+      "contacts": [
+        {
+          "name": "Santa Susana Depot",
+          "note": "6503 Katherine Road. Museum open weekends 1–4 PM.",
+          "phone": "",
+          "website": ""
+        },
+        {
+          "name": "Rancho Simi Recreation & Park District",
+          "note": "Parks, including Santa Susana Park and Corriganville",
+          "phone": "(805) 584-4400",
+          "website": "rsrpd.org"
+        },
+        {
+          "name": "Simi Valley Unified School District",
+          "note": "",
+          "phone": "(805) 520-6500",
+          "website": "simivalleyusd.org"
+        },
+        {
+          "name": "Simi Valley Library",
+          "note": "",
+          "phone": "(805) 526-1735",
+          "website": "simivalleylibrary.org"
+        },
+        {
+          "name": "Simi Valley Transit",
+          "note": "Local bus and Dial-A-Ride",
+          "phone": "(805) 583-6456",
+          "website": "simivalley.org"
+        },
+        {
+          "name": "Metrolink",
+          "note": "Train schedules from the Simi Valley station",
+          "phone": "1-800-371-5465",
+          "website": "metrolinktrains.com"
+        }
+      ]
+    }
+  ]
+}

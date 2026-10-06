@@ -1,0 +1,163 @@
+# Pages CMS setup for the Santa Susana Knolls website.
+# This file creates the edit forms at app.pagescms.org. You don't need to change it.
+
+media:
+  input: images
+  output: images
+
+content:
+  - name: meetings
+    label: HOA Meetings
+    description: Meetings are on the first Tuesday of each month you choose. The dates on the website update by themselves.
+    type: file
+    path: content/settings.json
+    fields:
+      - name: meeting_months
+        label: Meeting months
+        type: select
+        options:
+          multiple: true
+          values:
+            - { value: "1", label: January }
+            - { value: "2", label: February }
+            - { value: "3", label: March }
+            - { value: "4", label: April }
+            - { value: "5", label: May }
+            - { value: "6", label: June }
+            - { value: "7", label: July }
+            - { value: "8", label: August }
+            - { value: "9", label: September }
+            - { value: "10", label: October }
+            - { value: "11", label: November }
+            - { value: "12", label: December }
+      - { name: meeting_time, label: Start time, type: string }
+      - { name: meeting_place, label: Place, type: string }
+      - { name: meeting_note, label: Short note under the date, type: string, description: "Leave blank to hide it." }
+      - { name: hoa_email, label: General HOA email, type: string, description: 'Shown on the HOA and Contact pages. Leave blank to show "posted soon".' }
+
+  - name: board
+    label: HOA Board
+    description: Positions without a name are hidden on the website.
+    type: file
+    path: content/board.json
+    fields:
+      - name: members
+        label: Board members
+        type: object
+        list: true
+        fields:
+          - { name: role, label: Position, type: string }
+          - { name: name, label: Name, type: string }
+          - { name: email, label: Email, type: string }
+
+  - name: events
+    label: Community Events
+    description: Events show on the Home page in date order and disappear after their date. Leave the date blank for something ongoing.
+    type: file
+    path: content/events.json
+    fields:
+      - name: events
+        label: Events
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Event name, type: string }
+          - { name: date, label: Date, type: date }
+          - { name: time, label: Time, type: string }
+          - { name: place, label: Place, type: string }
+          - { name: details, label: Details, type: text }
+
+  - name: contacts
+    label: Community Contacts
+    description: Phone numbers and websites on the Contact page. Website can be just the address, like sce.com.
+    type: file
+    path: content/contacts.json
+    fields:
+      - name: groups
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Section title, type: string }
+          - { name: intro, label: Section note (optional), type: text }
+          - name: contacts
+            label: Contacts
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: note, label: Description (optional), type: string }
+              - { name: phone, label: Phone, type: string }
+              - { name: website, label: Website, type: string }
+
+  - name: pages
+    label: Page Text
+    type: group
+    items:
+      - name: home
+        label: Home page
+        type: file
+        path: content/home.json
+        fields:
+          - { name: title, label: Welcome heading, type: string }
+          - { name: intro, label: Welcome text, type: rich-text, options: { format: html } }
+          - { name: hero_image, label: Top photo, type: image }
+          - { name: hero_alt, label: Top photo description, type: string, description: "A few words describing the photo, for people using screen readers." }
+          - { name: side_image, label: Photo beside events, type: image }
+          - { name: side_alt, label: Photo description, type: string }
+          - { name: side_caption, label: Photo caption, type: string }
+
+      - name: about
+        label: About page
+        type: file
+        path: content/about.json
+        fields:
+          - { name: title, label: Page heading, type: string }
+          - { name: lede, label: Line under the heading, type: string }
+          - name: sections
+            label: Sections
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Heading, type: string }
+              - { name: text, label: Text, type: rich-text, options: { format: html } }
+              - { name: image, label: Photo (optional), type: image }
+              - { name: image_alt, label: Photo description, type: string }
+              - { name: caption, label: Photo caption, type: string }
+          - name: landmarks
+            label: Local landmarks
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: text, label: Description, type: text }
+          - name: gallery
+            label: Photo gallery
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Photo, type: image }
+              - { name: alt, label: Photo description, type: string }
+              - { name: caption, label: Caption, type: string }
+
+      - name: hoa
+        label: HOA page
+        type: file
+        path: content/hoa.json
+        fields:
+          - { name: title, label: Page heading, type: string }
+          - { name: lede, label: Line under the heading, type: string }
+          - { name: schedule_text, label: Meeting schedule text, type: rich-text, options: { format: html } }
+          - { name: board_text, label: Text above the board list, type: rich-text, options: { format: html } }
+          - { name: membership_text, label: Membership text, type: rich-text, options: { format: html } }
+          - { name: board_does_text, label: '"What the board does" box', type: rich-text, options: { format: html } }
+
+      - name: contact
+        label: Contact page
+        type: file
+        path: content/contact.json
+        fields:
+          - { name: title, label: Page heading, type: string }
+          - { name: lede, label: Line under the heading, type: string }
+          - { name: emergency_text, label: Text in the red 911 box, type: string }
+          - { name: footer_note, label: Note at the bottom, type: string }

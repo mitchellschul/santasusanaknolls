@@ -1,0 +1,77 @@
+{
+  "title": "About the Knolls",
+  "lede": "A small rural community in the hills of eastern Simi Valley, Ventura County.",
+  "sections": [
+    {
+      "heading": "The neighborhood",
+      "text": "<p>The Santa Susana Knolls straddles the hills (the “knolls”) at the foot of the Santa Susana Mountains, on the Simi Valley side. It is an unincorporated area of Ventura County, which means county agencies, not the City of Simi Valley, handle services such as law enforcement, roads and planning.</p><p>Our streets and lanes wind around the hills, and the city's street grid stops at the railroad crossings at the edge of the neighborhood. On moonless nights the surrounding mountains block the city lights, so you can see the Milky Way and the occasional meteor.</p><p>Wildlife is part of daily life here: roadrunners, quail, red-tailed hawks, screech owls and the occasional California king snake. Many residents keep horses, and the oak trees and sandstone outcroppings give the Knolls its character.</p>",
+      "image": "images/horses-hills.jpg",
+      "image_alt": "Horses in a corral on a hillside with the Santa Susana Mountains behind",
+      "caption": "Horse property looking toward the Santa Susana Mountains."
+    },
+    {
+      "heading": "A little history",
+      "text": "<p>Artifacts found in the open land across the tracks from the train depot show that people have lived in this area since long before the Spanish era.</p><p>The community grew up around the railroad. The Santa Susana Depot opened in 1903 and was moved in 1975 to its current home on Katherine Road, where it now houses a railroad museum and a public meeting room.</p><p>In the 20th century, the Hollywood film community kept getaway cabins in the Knolls. Many classic Westerns and action films were shot among the rocky outcroppings of nearby Corriganville. When Simi Valley incorporated as a city in 1969, the Knolls stayed outside the city limits and remains part of unincorporated Ventura County today.</p>",
+      "image": "images/stone-gate.jpg",
+      "image_alt": "A rock and stone archway at a Knolls home",
+      "caption": "Hand-built stonework on a Knolls lane."
+    },
+    {
+      "heading": "The Homeowners Association",
+      "text": "<p>The Santa Susana Knolls Homeowners Association was founded in 1969, when the City of Simi Valley incorporated. Unlike most HOAs, it was not started by a developer and does not maintain common areas. Residents formed it to keep the Knolls a close-knit, rural community and to give neighbors a shared voice on matters that affect the area.</p><p>The HOA is a registered California non-profit run by volunteer neighbors. New to the Knolls? Come to an HOA meeting at the Depot. It's the easiest way to meet your neighbors. <a href=\"hoa.html\">See the board and meeting schedule.</a></p>",
+      "image": "",
+      "image_alt": "",
+      "caption": ""
+    }
+  ],
+  "landmarks": [
+    {
+      "name": "Santa Susana Depot",
+      "text": "1903 railroad depot, now a museum with a model railroad. Home of our HOA meetings."
+    },
+    {
+      "name": "Corriganville Park",
+      "text": "The former movie ranch where Westerns were filmed, now a park with trails among the rocks."
+    },
+    {
+      "name": "Santa Susana Pass State Historic Park",
+      "text": "Open space and hiking along the historic stagecoach route over the pass."
+    },
+    {
+      "name": "Grandma Prisbrey's Bottle Village",
+      "text": "A folk-art site built from glass bottles, listed as a California Historical Landmark."
+    }
+  ],
+  "gallery": [
+    {
+      "image": "images/bougainvillea-lane.jpg",
+      "alt": "Bougainvillea and cactus along a lane with mountains behind",
+      "caption": "Lanes with mountain views"
+    },
+    {
+      "image": "images/boulder-house.jpg",
+      "alt": "A house beside a large sandstone boulder",
+      "caption": "Homes among the boulders"
+    },
+    {
+      "image": "images/dog-walk.jpg",
+      "alt": "A resident walking a dog along a shaded lane",
+      "caption": "Shaded walking lanes"
+    },
+    {
+      "image": "images/winding-road.jpg",
+      "alt": "A curving road lined with bougainvillea and oaks",
+      "caption": "Winding hillside roads"
+    },
+    {
+      "image": "images/garden-street.jpg",
+      "alt": "A quiet tree-lined street with gardens",
+      "caption": "Quiet garden streets"
+    },
+    {
+      "image": "images/aerial.jpg",
+      "alt": "Aerial view of the Knolls among the hills",
+      "caption": "The Knolls from above"
+    }
+  ]
+}
