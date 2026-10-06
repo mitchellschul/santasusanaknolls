@@ -1,5 +1,4 @@
 {
-  "hoa_email": "",
   "meeting_months": [
     "2",
     "4",
@@ -10,5 +9,6 @@
   ],
   "meeting_time": "7:00 PM",
   "meeting_place": "Santa Susana Depot, 6503 Katherine Road",
-  "meeting_note": "All Knolls residents are welcome."
+  "meeting_note": "All Knolls residents are welcome.",
+  "hoa_email": "susanaknollshoa@gmail.com"
 }
