@@ -2,43 +2,29 @@
   "members": [
     {
       "role": "President",
-      "name": "",
-      "email": ""
+      "name": "Name Name",
+      "email": "Name@hoa.com"
     },
     {
-      "role": "Vice President",
-      "name": "",
-      "email": ""
+      "role": "Vice President"
     },
     {
-      "role": "Treasurer",
-      "name": "",
-      "email": ""
+      "role": "Treasurer"
     },
     {
-      "role": "Recording Secretary",
-      "name": "",
-      "email": ""
+      "role": "Recording Secretary"
     },
     {
-      "role": "Media Secretary",
-      "name": "",
-      "email": ""
+      "role": "Media Secretary"
     },
     {
-      "role": "Neighborhood Representative",
-      "name": "",
-      "email": ""
+      "role": "Neighborhood Representative"
     },
     {
-      "role": "Neighborhood Representative",
-      "name": "",
-      "email": ""
+      "role": "Neighborhood Representative"
     },
     {
-      "role": "Neighborhood Representative",
-      "name": "",
-      "email": ""
+      "role": "Neighborhood Representative"
     }
   ]
 }
