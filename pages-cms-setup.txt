@@ -161,3 +161,32 @@ content:
           - { name: lede, label: Line under the heading, type: string }
           - { name: emergency_text, label: Text in the red 911 box, type: string }
           - { name: footer_note, label: Note at the bottom, type: string }
+
+      - name: privacy
+        label: Privacy policy
+        type: file
+        path: content/privacy.json
+        fields:
+          - { name: title, label: Page heading, type: string }
+          - { name: updated, label: Last updated, type: date, description: "Change this date whenever you edit the policy." }
+          - { name: body, label: Policy text, type: rich-text, options: { format: html } }
+
+      - name: accessibility
+        label: Accessibility statement
+        type: file
+        path: content/accessibility.json
+        fields:
+          - { name: title, label: Page heading, type: string }
+          - { name: updated, label: Last updated, type: date, description: "Change this date whenever you edit the statement." }
+          - { name: body, label: Statement text, type: rich-text, options: { format: html } }
+
+      - name: notfound
+        label: Page not found (404)
+        description: Shown when someone follows a broken link or mistypes an address.
+        type: file
+        path: content/notfound.json
+        fields:
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: rich-text, options: { format: html } }
+          - { name: image, label: Photo, type: image }
+          - { name: image_alt, label: Photo description, type: string }

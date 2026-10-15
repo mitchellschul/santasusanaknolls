@@ -5,8 +5,15 @@
 
   var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+  /* Folder the site lives in, worked out from this script's own address,
+     so pages (including the 404 page at any address) can find content/ and images/. */
+  var BASE = (function () {
+    var src = (document.currentScript && document.currentScript.src) || "";
+    return src ? src.replace(/[^\/]*$/, "") : "";
+  })();
+
   function load(name) {
-    return fetch("content/" + name + ".json", { cache: "no-cache" }).then(function (r) {
+    return fetch(BASE + "content/" + name + ".json", { cache: "no-cache" }).then(function (r) {
       if (!r.ok) throw new Error(name + ".json: " + r.status);
       return r.json();
     });
@@ -17,7 +24,10 @@
     });
   }
   function has(s) { return s != null && String(s).trim() !== ""; }
-  function img(src) { return String(src || "").replace(/^\//, ""); }
+  function img(src) {
+    src = String(src || "");
+    return /^https?:\/\//i.test(src) ? src : BASE + src.replace(/^\//, "");
+  }
 
   /* ---------- Meetings: first Tuesday of each chosen month ---------- */
   function meetingMonths(settings) {
@@ -108,7 +118,36 @@
   }
 
   /* ---------- Pages ---------- */
+  function docPage(name) {
+    return load(name).then(function (d) {
+      return '<div class="wrap page-head doc"><h1>' + esc(d.title) + "</h1>" +
+        (has(d.updated) ? '<p class="updated">Last updated ' + esc(longDate(d.updated)) + "</p>" : "") +
+        '<div class="rich">' + (d.body || "") + "</div></div>";
+    });
+  }
+  function longDate(ymd) {
+    var p = String(ymd).split("-");
+    if (p.length !== 3) return ymd;
+    return fmt(new Date(+p[0], +p[1] - 1, +p[2]), { month: "long", day: "numeric", year: "numeric" });
+  }
+
   var pages = {
+    privacy: function () { return docPage("privacy"); },
+    accessibility: function () { return docPage("accessibility"); },
+
+    notfound: function () {
+      return load("notfound").then(function (n) {
+        var root = BASE;
+        return (has(n.image) ? '<section class="hero"><img src="' + esc(img(n.image)) + '" alt="' + esc(n.image_alt) + '"></section>' : "") +
+          '<section class="wrap notfound"><h1>' + esc(n.title) + '</h1><div class="rich">' + (n.text || "") + "</div>" +
+          '<div class="links3">' +
+          '<a href="' + root + '"><strong>Home</strong><span>Meeting dates and community events.</span></a>' +
+          '<a href="' + root + 'hoa.html"><strong>HOA board &amp; meetings</strong><span>Board members and the meeting schedule.</span></a>' +
+          '<a href="' + root + 'contact.html"><strong>Community contacts</strong><span>Sheriff, fire, utilities and county offices.</span></a>' +
+          "</div></section>";
+      });
+    },
+
     home: function () {
       return Promise.all([load("home"), load("settings"), load("events")]).then(function (r) {
         var h = r[0], s = r[1], ev = r[2];
