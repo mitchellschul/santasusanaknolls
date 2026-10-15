@@ -1,9 +1,7 @@
 {
   "members": [
     {
-      "role": "President",
-      "name": "Name Name",
-      "email": "Name@hoa.com"
+      "role": "President"
     },
     {
       "role": "Vice President"
