@@ -241,6 +241,9 @@
       if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
     }).catch(function (err) {
       console.error(err);
+      main.classList.remove("loading");
+      // Pages with built-in text (Privacy, Accessibility, Page not found) keep it if their content file is missing.
+      if (main.hasAttribute("data-fallback")) return;
       main.innerHTML = '<div class="wrap page-head"><h1>Sorry, this page didn\'t load</h1><p>Please refresh the page. If it keeps happening, let the HOA board know.</p></div>';
     });
   }
